@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+	<!-- CS0507 -->
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='AuthRequestParam']/method[@name='onCreateRequestParamBundle' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="visibility">protected</attr>
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='GameRequestParam']/method[@name='onCreateRequestParamBundle' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="visibility">protected</attr>
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='ShareRequestParam']/method[@name='onCreateRequestParamBundle' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="visibility">protected</attr>
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='WidgetRequestParam']/method[@name='onCreateRequestParamBundle' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="visibility">protected</attr>
+
+	<!-- CS0535 -->
+	<attr path="/api/package[@name='com.sina.weibo.sdk.register.mobile']/class[@name='Country']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.sina.weibo.sdk.register.mobile.Country']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<!-- CS0234 -->
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='BrowserLauncher']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.sina.weibo.sdk.component']/interface[@name='BrowserRequestCallBack']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.sina.weibo.sdk.api.share']/interface[@name='IVersionCheckHandler']" name="visibility">public</attr>
+</metadata>
